@@ -9,7 +9,7 @@ define(
         rendererList.push(
             {
                 type: 'simple',
-                component: 'Decimal_Checkout/js/view/payment/method-renderer/simple-method'
+                component: 'Decimal_Payment/js/view/payment/method-renderer/simple-method'
             }
         );
         return Component.extend({});

@@ -6,7 +6,7 @@
 
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Decimal_SamplePaymentGateway',
+    'Decimal_Payment',
     __DIR__
 );
 
