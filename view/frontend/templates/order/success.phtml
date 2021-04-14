@@ -1,0 +1,30 @@
+<?php
+if(isset($_SESSION['method'])){
+    $invoice=$_SESSION['invoice'];
+    $totalPrice=$_SESSION['totalPrice'];
+    $coin=$_SESSION['coin'];
+    $quantity=$_SESSION['quantity'];
+    $totalPaidCoins=round($_SESSION['totalPaidCoins'],2);
+}
+
+?>
+<?php if(isset($_SESSION['method'])){?>
+<div class="control">
+    <img src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="<?=$invoice?>"'>
+    <p>
+        <input type="text" id="invoice" disabled value="<?=$invoice?>">
+    </p>
+    <p>
+        Total: <?=$totalPrice?> $
+    </p>
+    <p>
+        Quantity: <?=$quantity?>
+    </p>
+    <p>
+        Total coins: <?=$totalPaidCoins?>
+    </p>
+    <p>
+        Coin: <?=$coin?>
+    </p>
+</div>
+<?php unset($_SESSION['method']); }?>
