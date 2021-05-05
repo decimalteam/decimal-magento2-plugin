@@ -1,5 +1,5 @@
 <?php
-if(isset($_SESSION['method'])){
+if(isset($_SESSION['decimal'])){
     $invoice=$_SESSION['invoice'];
     $totalPrice=$_SESSION['totalPrice'];
     $coin=$_SESSION['coin'];
@@ -8,7 +8,7 @@ if(isset($_SESSION['method'])){
 }
 
 ?>
-<?php if(isset($_SESSION['method'])){?>
+<?php if(isset($_SESSION['decimal'])){?>
 <div class="control">
     <img src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="<?=$invoice?>"'>
     <p>
@@ -27,4 +27,4 @@ if(isset($_SESSION['method'])){
         Coin: <?=$coin?>
     </p>
 </div>
-<?php unset($_SESSION['method']); }?>
+<?php unset($_SESSION['decimal']); }?>

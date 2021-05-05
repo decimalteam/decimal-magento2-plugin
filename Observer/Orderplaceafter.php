@@ -54,7 +54,7 @@ class Orderplaceafter implements \Magento\Framework\Event\ObserverInterface
         $_SESSION['totalPrice']=$totalPrice;
         $_SESSION['coin']='del';
         $_SESSION['quantity']=$quantity;
-        $_SESSION['method']='decimal';
+        $_SESSION['decimal']=1;
 
         //send data to PGW
         $this->sendInvoice($invoice,'del');
